@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src ="../Module.js" type="text/javascript"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var jpr = new JSONPRequest;
+        jpr.open("https://api.weibo.com/2/statuses/friends_timeline.json?callback=callback&access_token=TOKEN");
+        jpr.onload = function(data){
+            console.log(data);
+        }
+        jpr.send(null);
+    </script>
+</body>
+</html>
